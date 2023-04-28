@@ -25,7 +25,7 @@
     <p><h3>🚀 The Intel oneAPI Toolkit</h3></p>
     <p><h4>Toolkit used: Intel® AI Analytics Toolkit (AI Kit) - Python 3 (Intel® oneAPI 2023.0)</h4></p>
     <p><t>&emsp;&emsp;&emsp;We have successfully utilized the Intel® AI Analytics Toolkit to optimize our model and achieve superior results. This comprehensive toolkit enables us to accelerate end-to-end data science and machine learning pipelines using Python* tools and frameworks. Leveraging state-of-the-art deep learning frameworks such as PyTorch and TensorFlow, which are optimized for the Intel architecture by the oneAPI platform, has allowed us to achieve high performance and accuracy in our Safety Gear Detection System for Construction Workers. Additionally, the Intel® Extension for Scikit-Learn has been enabled for improved performance. The toolkit also provides support for several pre-trained models, including DenseNet, ResNet, YOLOv3, and more, which have been instrumental in our project. Furthermore, leveraging transfer learning with pre-trained models on Intel DevCloud for oneAPI has boosted our system's accuracy and performance. The detection part of the safety gear is performed on Intel DevCloud, showcasing the versatility and capabilities of the Intel® AI Analytics Toolkit in delivering optimal performance.</p>
-    <p>&emsp;&emsp;&emsp;We achieved 80% accuracy in the detection using two state-of-the-art models: &emsp;&emsp;1) ResNet50 &emsp;&emsp;2) DenseNet169</p>
+    <p>&emsp;&emsp;&emsp;We achieved 80% accuracy in the detection using two state-of-the-art models: <br>&emsp;&emsp;&emsp;&emsp;&emsp;1) ResNet50 &emsp;&emsp;2) DenseNet169</p>
     </div>
     <br>
    
