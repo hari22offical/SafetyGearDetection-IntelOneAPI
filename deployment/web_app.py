@@ -1,5 +1,3 @@
-
-
 import streamlit as st
 from PIL import Image
 import cv2
@@ -7,14 +5,13 @@ import tempfile
 import numpy as np
 import tensorflow as tf
 
-# Load the ResNet model
-model = tf.keras.models.load_model("C:/Users/harin/Pictures/protection_gear_detection_project/model_files/densenet.h5")
+# loading the DenseNet model
+model = tf.keras.models.load_model("C:/Users/jeyasri/Downloads/densenet.h5")
 
-# Define the safety gear class labels
-safety_gear_labels = ['helmet', 'no-helmet', 'no-vest', 'person', 'vest']
+# class labels
+safety_gear_labels = ["helmet", "vest", "person", "no-vest", "no-helmet"]
 
-
-# Function to preprocess the image
+# function to preprocess the image
 def preprocess_image(image):
     image = image.resize((224, 224))
     image = np.array(image)
@@ -22,7 +19,7 @@ def preprocess_image(image):
     image = np.expand_dims(image, axis=0)
     return image
 
-# Function to preprocess the video frames
+# function to preprocess the video frames
 def preprocess_frame(frame):
     frame = cv2.resize(frame, (224, 224))
     frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
@@ -30,7 +27,7 @@ def preprocess_frame(frame):
     frame = np.expand_dims(frame, axis=0)
     return frame
 
-# Function to perform object detection on image
+# function to perform object detection on image
 def detect_objects_image(image):
     image = preprocess_image(image)
     prediction = model.predict(image)
@@ -39,7 +36,7 @@ def detect_objects_image(image):
     confidence = prediction[0][class_index] * 100
     return class_label, confidence
 
-# Function to perform object detection on video frames
+# function to perform object detection on video frames
 def detect_objects_video(frame):
     frame = preprocess_frame(frame)
     prediction = model.predict(frame)
@@ -48,7 +45,7 @@ def detect_objects_video(frame):
     confidence = prediction[0][class_index] * 100
     return class_label, confidence
 
-# Streamlit app
+# streamlit app
 def app():
     st.title("Safety Gear Object Detection for Construction Workers")
     st.write("Upload an image or a video, or start webcam streaming to detect safety gear objects.")
